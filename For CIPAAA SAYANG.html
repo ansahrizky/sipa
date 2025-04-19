@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For CIPAAA SAYANG</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fdf0e9, #fce5df);
+      font-family: 'Quicksand', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #4b2e2e;
+      background-size: cover;
+    }
+
+    .card {
+      background: rgba(255, 248, 240, 0.95);
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+      margin: 20px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      animation: scaleUp 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      color: #c26b5e;
+      margin-bottom: 15px;
+      animation: textPopUp 1.2s ease;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #5a3e36;
+      opacity: 0;
+      animation: textReveal 2s ease forwards;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .button {
+      background-color: #c26b5e;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      margin: 12px 6px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 300px;
+    }
+
+    .button:hover {
+      background-color: #a25644;
+      transform: scale(1.05);
+    }
+
+    audio {
+      display: none;
+    }
+
+    @keyframes scaleUp {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes textPopUp {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes textReveal {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .button {
+        font-size: 0.95em;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <a href="https://500px.com/photo/1111966410/cipa-poto-by-pt-sejahtera-abadi" target="_blank" rel="noopener noreferrer">
+      <img src="https://drscdn.500px.org/photo/1111966410/q%3D80_m%3D600/v2?sig=0701752f0421769e098f914189718583d801b8269b461bb9154c5fc01a932ed3" alt="Foto Cipa">
+    </a>
+
+    <h1>Selamat Ulang Tahun, Love Sipa 💗</h1>
+
+    <!-- Pesan disembunyikan dulu -->
+    <p id="message" class="hidden">
+      Semoga sehat selalu, makin semangat kuliahnya sayanggg. I LOVE YOUUU honeyy 💗! Maafin telat kasih link-nya yaa, kemarin kamu ngajak berantem dulu sii. Dari Iki tercintah 💌
+    </p>
+
+    <button class="button" onclick="showMessage()">📩 Klik DISINI ADA Pesan</button>
+    <button class="button" onclick="changeBackground()">🎨 Ganti Bae Latar Belakang</button>
+
+    <a href="https://wa.me/6282124533756?text=kesel%20apa,%20Sayang%20sama%20aku?" target="_blank" rel="noopener noreferrer">
+      <button class="button">💬 OTW Chat Aku 😘</button>
+    </a>
+
+    <audio autoplay loop>
+      <source src="https://cdn.pixabay.com/download/audio/2023/03/20/audio_88f7c6fd67.mp3?filename=romantic-piano-melody-144998.mp3" type="audio/mpeg">
+      Browser kamu tidak mendukung audio otomatis.
+    </audio>
+  </div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+      message.classList.remove("hidden");
+    }
+
+    function changeBackground() {
+      const body = document.body;
+      const randomColors = [
+        "linear-gradient(to bottom right, #fdf0e9, #fce5df)",
+        "linear-gradient(to bottom right, #ff9a9e, #fad0c4)",
+        "linear-gradient(to bottom right, #d4c4e4, #f0d4d9)",
+        "linear-gradient(to bottom right, #a8c0ff, #3f2b96)"
+      ];
+      const randomColor = randomColors[Math.floor(Math.random() * randomColors.length)];
+      body.style.background = randomColor;
+    }
+  </script>
+</body>
+</html>
